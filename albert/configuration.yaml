@@ -1,0 +1,30 @@
+file_name: HF_QCM_reconcilie_V1.json
+folder_name: FOLDER_ANSWERS,
+
+generators:
+  answers:
+    prompter: Prompter_from_human_evaluated_Expe
+    llms_name:
+      - gpt-4o
+      - mistral/mistral-large-latest
+      - groq/llama3-8b-8192
+      - groq/llama3-70b-8192
+      - groq/mixtral-8x7b-32768
+      - groq/gemma-7b-it
+      - Albert_LLM
+    export:
+      html: {}
+  facts:
+    prompter: FactPrompterFR
+    llms_name:
+      - gpt-4o
+    export:
+      html: {}
+  evals:
+    prompter: EvalPrompterFR
+    llms_name:
+      - gpt-4o
+    export:
+      html: {}
+      spreadsheet:
+        template_file_name: Test_template.xlsx
